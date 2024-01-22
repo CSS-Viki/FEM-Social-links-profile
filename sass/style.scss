@@ -1,0 +1,116 @@
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 20%);
+$Green: hsl(75, 94%, 57%);
+$Dark-Grey: hsl(0, 0%, 12%);
+$Off-Black: hsl(0, 0%, 8%);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: $Off-Black;
+}
+.flex-items {
+  display: flex;
+  flex-direction: column;
+}
+
+// Styles
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container {
+  background-color: $Dark-Grey;
+  max-width: 400px;
+  width: 100%;
+  padding: 2em;
+  border-radius: 8px;
+
+  .profile-info {
+    @extend .flex-items;
+    align-items: center;
+    gap: 20px;
+
+    .avatar {
+      img {
+        width: 88px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .user-info {
+    @extend .flex-items;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+      color: $White;
+      font-size: clamp(0.8rem, 0.6091rem + 1.0182vw, 1.5rem);
+    }
+    p {
+      color: $Green;
+      font-weight: 700;
+      font-size: clamp(0.9rem, 0.4909rem + 0.5818vw, 1rem);
+    }
+  }
+  q {
+    color: $White;
+    font-weight: 600;
+    font-size: clamp(0.5rem, 0.3977rem + 0.5455vw, 0.875rem);
+  }
+  .links {
+    @extend .flex-items;
+    margin-block-start: 30px;
+    a + a {
+      margin-block-start: 15px;
+    }
+    a {
+      background-color: $Grey;
+      text-align: center;
+      text-decoration: none;
+      color: $White;
+      font-weight: 700;
+      font-size: clamp(0.7rem, 0.3977rem + 0.5455vw, 0.875rem);
+      padding-block: 1em;
+      border-radius: 8px;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        color: $Grey;
+        background-color: $Green;
+      }
+    }
+  }
+}
+.attribution {
+  font-size: clamp(0.6rem, 0.3977rem + 0.5455vw, 0.8rem);
+  text-align: center;
+  color: $White;
+  font-weight: 600;
+  margin-block: 0.8em;
+}
+.attribution a {
+  color: $Green;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 2em;
+  }
+  .container {
+    padding: 1em;
+
+    .links {
+      margin-block-start: 20px;
+    }
+  }
+}
