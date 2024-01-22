@@ -47,7 +47,7 @@ body {
 }
 .container .user-info h1 {
   color: hsl(0, 0%, 100%);
-  font-size: clamp(1.5rem, 0.6091rem + 1.0182vw, 2rem);
+  font-size: clamp(1.5rem, 0.6091rem + 1.0182vw, 1.8rem);
 }
 .container .user-info p {
   color: hsl(75, 94%, 57%);
@@ -57,7 +57,7 @@ body {
 .container q {
   color: hsl(0, 0%, 100%);
   font-weight: 400;
-  font-size: clamp(0.75rem, 0.3977rem + 0.5455vw, 1.2rem);
+  font-size: clamp(0.75rem, 0.3977rem + 0.5455vw, 0.9rem);
   width: 100%;
   text-align: center;
 }
@@ -74,7 +74,7 @@ body {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   font-size: clamp(0.9rem, 0.3977rem + 0.5455vw, 1rem);
-  padding-block: 1em;
+  padding-block: 0.8em;
   border-radius: 8px;
   transition: all 0.4s ease-in-out;
 }
